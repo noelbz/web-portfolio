@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Noel | Portfolio</title>
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+    <header>
+
+        <!-- Navbar -->
+        <nav>
+            <div class="logo">Noel</div>
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#knowledge">Knowledge</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#references">References</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero -->
+        <section class="hero">
+                <div class="hero-text">
+                    <h1>Hi, I'm Noel</h1>
+                    <h2>.NET Developer</h2>
+                    <p>I build fullstack applications using C#, HTML, CSS and JavaScript.</p>
+                    <a href="images/Noel Zemicael CV.pdf" class="btn" download>Download My CV</a>
+                </div>
+                <img class="hero-image" src="images/portrait.webp" alt="Portrait"/>
+        </section>
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+        <!-- About Me -->
+        <section id="about-me">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I am a .NET Developer passionate about building clean, scalable and user-friendly applications. I enjoy working with C#, HTML, CSS, JS and modern web technologies to bring ideas to life.
+            </p>
+        </section>
+
+        <!-- Knowledge -->
+        <section id="knowledge">
+            <h2 class="section-title">Knowledge</h2>
+            <p>
+                Experience with C#, HTML, CSS and JS.
+            </p>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio">
+            <h2 class="section-title">Portfolio</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Project 1</h3>
+                    <p>Zoo Website</p>
+                    <a href="https://github.com/noelbz" target="_blank" class="btn"><strong>Github</strong></a>
+                    <a href="https://noelbz.github.io/HTMLZoo/" target="_blank" class="btn"><strong>Live Demo</strong></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- References -->
+        <section id="references">
+            <h2 class="section-title">References</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <p><em>"He is an ambitious coder who gets the job done!"</em></p>
+                    <p>- Hans, Teacher in YH Nackademin</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <p>Fill out the form below to get in touch with me.</p>
+            <form class="contact-form" action="https://formsubmit.co/noelberaki1@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/noel-zemicael-2760a9314/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/__noelb1/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://github.com/noelbz" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Noel - Portfolio</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
