@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Projects</title>
+</head>
+
+<body>
+<div id="navbar"></div>
+
+<div class="page-content">
+
+  <section>
+    <h1>Projects</h1>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <a href="https://github.com/noelbz/web-portfolio" target="_blank" class="project-link">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/PortfolioPic.png" alt="Portfolio">
+          </div>
+
+          <h2>Portfolio Website</h2>
+          <p>Modern personal portfolio built with HTML, CSS and JavaScript.</p>
+
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 2 -->
+      <a href="https://github.com/noelbz/js-movie-seat-booker" target="_blank" class="project-link">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/MovieTheaterPic.png" alt="MovieTheater">
+          </div>
+
+          <h2>Movie Theater</h2>
+          <p>Using JavaScript and a JSON-server. UI is not designed by me.</p>
+
+          <div class="tags">
+            <span>Frontend</span>
+            <span>Database</span>
+            <span>JSON Server</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 3 -->
+      <a href="https://github.com/noelbz/aspnet-noel-zemicael" target="_blank" class="project-link">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/GymPortal.png" alt="GymPortal">
+          </div>
+
+          <h2>Gym Portal</h2>
+          <p>Built frontend with ASP.NET MVC and Backend in Clean Architechture.</p>
+
+          <div class="tags">
+            <span>Backend</span>
+            <span>Frontend</span>
+            <span>C#</span>
+            <span>Database</span>
+            <span>ASP.NET MVC</span>
+            <span>CSHTML</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+</div>
+
+<script src="index.js"></script>
+
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      const navbar = document.getElementById("navbar");
+      navbar.innerHTML = data;
+
+      requestAnimationFrame(() => {
+        setActiveLink();
+      });
+    });
+</script>
+
+</body>
+</html>

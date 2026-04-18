@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Noel Zemicael</title>
+</head>
+<body>
+<div id="navbar"></div>
+<div class="page-content">
+    <section>
+        <h1>Skills</h1>
+        <div class="card-row">
+            <!-- Frontend -->
+            <div class="card card--lg">
+                <h2>Frontend</h2>
+
+                <div class="card-grid">
+                <div class="card card--sm">HTML</div>
+                <div class="card card--sm">CSS</div>
+                <div class="card card--sm">JavaScript</div>
+                <div class="card card--sm">ASP.NET MVC</div>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="card card--lg">
+                <h2>Backend</h2>
+
+                <div class="card-grid">
+                <div class="card card--sm">C#</div>
+                <div class="card card--sm">.NET</div>
+                <div class="card card--sm">ASP.NET</div>
+                <div class="card card--sm">REST APIs</div>
+                <div class="card card--sm">Clean Architechture</div>
+                </div>
+            </div>
+
+            <div class="card card--lg">
+                <h2>Database</h2>
+
+                <div class="card-grid">
+                <div class="card card--sm">SQL Server</div>
+                <div class="card card--sm">EntityFramework</div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="card card--lg">
+                <h2>Tools</h2>
+
+                <div class="card-grid">
+                <div class="card card--sm">Git</div>
+                <div class="card card--sm">Git bash</div>
+                <div class="card card--sm">VS Code</div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="index.js"></script>
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      const navbar = document.getElementById("navbar");
+      navbar.innerHTML = data;
+
+      requestAnimationFrame(() => {
+        setActiveLink();
+      });
+    });
+</script>
+</body>
+</html>

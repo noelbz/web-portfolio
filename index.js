@@ -1,47 +1,38 @@
-const form = document.querySelector('.contact-form');
+function setActiveLink() {
+  const links = document.querySelectorAll(".nav-link");
 
-// Error fields
-const nameError = document.getElementById('name-error');
-const emailError = document.getElementById('email-error');
-const messageError = document.getElementById('message-error');
+  let currentPage = window.location.pathname.split("/").pop();
+  if (currentPage === "" || currentPage === "/") {
+    currentPage = "index.html";
+  }
 
-// Validation runs when someone submits the forms.
-form.addEventListener('submit', function(e) {
-    let hasError = false;
-
-    // Clear old errors
-    nameError.textContent = "";
-    emailError.textContent = "";
-    messageError.textContent = "";
-
-    // Removes spaces in name, email and message to control better.
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-
-    // Name empty
-    if (!name) {
-        nameError.textContent = "Name is required.";
-        hasError = true;
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
     }
+  });
+}
 
-    // Email empty or invalid missing @ or a dot.
-    if (!email) {
-        emailError.textContent = "Email is required.";
-        hasError = true;
-    } else if (!email.includes("@") || !email.includes(".")) {
-        emailError.textContent = "Email must be valid.";
-        hasError = true;
-    }
+/* FADE IN */
+window.addEventListener("DOMContentLoaded", () => {
+  const content = document.querySelector(".page-content");
+  if (content) content.classList.remove("fade-out");
+});
 
-    // Message too short
-    if (message.length < 10) {
-        messageError.textContent = "Message must be at least 10 characters.";
-        hasError = true;
-    }
+/* FADE OUT CONTENT */
+document.addEventListener("click", (e) => {
+  const link = e.target.closest("a");
 
-    // Wont submit if there's a error
-    if (hasError) {
-        e.preventDefault();
-    }
+  if (!link || !link.href.includes(".html")) return;
+
+  e.preventDefault();
+
+  const content = document.querySelector(".page-content");
+  const destination = link.href;
+
+  if (content) content.classList.add("fade-out");
+
+  setTimeout(() => {
+    window.location.href = destination;
+  }, 300);
 });
