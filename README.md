@@ -5,16 +5,15 @@ This is my personal portfolio website.
 I am a .NET Developer building fullstack applications using C#, HTML, CSS, and JavaScript.
 
 ## Features
+- Navigation by navbar
 - Download CV
-- Contact form with validation
 - Portfolio section with project links
-- References and social media links
+- Contact info
 
 ## How to Use
-Visit the website, check out my projects, or use the contact form to reach me.
+Visit the website, check out my projects, skillsets and contact info.
 
 ## Technologies
 - HTML
 - CSS
 - JavaScript
-- C#
